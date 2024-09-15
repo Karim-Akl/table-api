@@ -57,8 +57,8 @@ const App = () => {
   }, []);
 
   return (
-    <TableContainer component={Paper} style={{ height: 400, width: '100%' }}>
-      <Table>
+    <TableContainer component={Paper} style={{ width: '100%', height: '100vh',margin:"auto"}}>
+      <Table style={{ minWidth: 650 }}>
         <TableHead>
           <TableRow>
             <TableCell>Name</TableCell>
