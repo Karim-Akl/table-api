@@ -57,26 +57,28 @@ const App = () => {
   }, []);
 
   return (
-    <TableContainer component={Paper} style={{ width: '100%', height: '100vh',margin:"auto"}}>
-      <Table style={{ minWidth: 650 }}>
-        <TableHead>
-          <TableRow>
-            <TableCell>Name</TableCell>
-            <TableCell align="right">Height (cm)</TableCell>
-            <TableCell align="right">Mass (kg)</TableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {data.map((person, index) => (
-            <TableRow key={index}>
-              <TableCell>{person.name}</TableCell>
-              <TableCell align="right">{person.height}</TableCell>
-              <TableCell align="right">{person.mass}</TableCell>
+    <div style={{ display: 'flex', justifyContent: 'center', padding: '16px' }}>
+      <TableContainer component={Paper} style={{ width: '100%', maxWidth: '100%' }}>
+        <Table>
+          <TableHead>
+            <TableRow>
+              <TableCell>Name</TableCell>
+              <TableCell align="right">Height (cm)</TableCell>
+              <TableCell align="right">Mass (kg)</TableCell>
             </TableRow>
-          ))}
-        </TableBody>
-      </Table>
-    </TableContainer>
+          </TableHead>
+          <TableBody>
+            {data.map((person, index) => (
+              <TableRow key={index}>
+                <TableCell>{person.name}</TableCell>
+                <TableCell align="right">{person.height}</TableCell>
+                <TableCell align="right">{person.mass}</TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </TableContainer>
+    </div>
   );
 };
 
