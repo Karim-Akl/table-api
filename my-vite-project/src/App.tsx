@@ -57,8 +57,14 @@ const App = () => {
   }, []);
 
   return (
-    <div style={{ display: 'flex', justifyContent: 'center', padding: '16px' }}>
-      <TableContainer component={Paper} style={{ width: '100%', maxWidth: '100%' }}>
+    <div style={{
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      height: '100vh',
+      padding: '16px'
+    }}>
+      <TableContainer component={Paper} style={{ width: '100%', maxWidth: '1200px' }}>
         <Table>
           <TableHead>
             <TableRow>
